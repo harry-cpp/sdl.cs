@@ -8,14 +8,14 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageName>sdl.cs</PackageName>
+    <PackageId>sdl.cs</PackageId>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>Paul Vick</Authors>
-    <Company>Paul Vick</Company>
-    <Description>A C# binding for the Simple DirectMedia Layer library (http://www.libsdl.org).</Description>
-    <Copyright>Copyright 2019</Copyright>
+    <Authors>cra0zy</Authors>
+    <Company>cra0zy</Company>
+    <Description>A C# binding for the Simple DirectMedia Layer library (http://www.libsdl.org). This is my personal fork of the SdlSharp nuget package.</Description>
+    <Copyright>Copyright 2022</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/panopticoncentral/sdk-sharp</RepositoryUrl>
+    <RepositoryUrl>https://github.com/harry-cpp/sdl.cs</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 

@@ -1,12 +1,14 @@
-# SDL#
+# sdl.cs
 
-The SDL# library is a [.NET](https://dotnet.microsoft.com/) wrapper around the [Simple DirectMedia Layer](https://www.libsdl.org/index.php) (SDL) library, a cross-platform graphics, audio, and input library. It provides both a set of low-level APIs that enables calling most SDL APIs directly, and a set of high-level object-oriented classes that abstracts working with the SDL API in a more .NET-friendly way.
+This is a my personal fork of https://github.com/panopticoncentral/sdl-sharp, feel free tho to make PRs against this repo if you so choose to use it :)
 
-You can include SDL# in your project using the [SDLSharp](https://www.nuget.org/packages/SdlSharp) NuGet package.
+The sdl.cs library is a [.NET](https://dotnet.microsoft.com/) wrapper around the [Simple DirectMedia Layer](https://www.libsdl.org/index.php) (SDL) library, a cross-platform graphics, audio, and input library. It provides both a set of low-level APIs that enables calling most SDL APIs directly, and a set of high-level object-oriented classes that abstracts working with the SDL API in a more .NET-friendly way.
+
+You can include sdl.cs in your project using the [sdl.cs](https://www.nuget.org/packages/sdl.cs) NuGet package.
 
 Branch|Status
 ---|---
-master|![master](https://github.com/panopticoncentral/sdl-sharp/workflows/Continuous%20Integration/badge.svg)
+master|![master](https://github.com/harry-cpp/sdl.cs/workflows/Continuous%20Integration/badge.svg)
 
 ## Tutorial
 
