@@ -18,4 +18,8 @@
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="VulkanSharp" Version="0.1.10" />
+  </ItemGroup>
+
 </Project>

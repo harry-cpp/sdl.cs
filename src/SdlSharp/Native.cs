@@ -3294,6 +3294,15 @@ namespace SdlSharp
         [DllImport(Sdl2, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SDL_DisableScreenSaver();
 
+        [DllImport(Sdl2, CallingConvention = CallingConvention.Cdecl)]
+		public static extern bool SDL_Vulkan_CreateSurface(SDL_Window* window, IntPtr instance, out UInt64 surface);
+
+        [DllImport(Sdl2, CallingConvention = CallingConvention.Cdecl)]
+		public static extern bool SDL_Vulkan_GetInstanceExtensions(SDL_Window* window, out uint pCount, IntPtr pNames);
+
+        [DllImport(Sdl2, CallingConvention = CallingConvention.Cdecl)]
+		public static extern bool SDL_Vulkan_GetInstanceExtensions(SDL_Window* window, out uint pCount, IntPtr[] pNames);
+
         //public extern static int SDL_GL_LoadLibrary(string path);
         //public extern static void* SDL_GL_GetProcAddress(string proc);
         //public extern static void SDL_GL_UnloadLibrary();
