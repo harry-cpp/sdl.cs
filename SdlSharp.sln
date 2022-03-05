@@ -28,8 +28,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07_Sprites", "src\Tutorial\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08_Text", "src\Tutorial\08_Text\08_Text.csproj", "{99DC56AC-0726-4768-8F17-BDCA68707CBF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SdlSharp.Redist", "src\SdlSharp.Redist\SdlSharp.Redist.csproj", "{2D3D68F0-ADE9-408A-9AF2-CBE4408C388E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

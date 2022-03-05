@@ -18,8 +18,4 @@
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="SdlSharp.Redist" Version="$(SdlRedistVersion)" />
-  </ItemGroup>
-
 </Project>
