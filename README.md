@@ -8,7 +8,7 @@ You can include sdl.cs in your project using the [sdl.cs](https://www.nuget.org/
 
 Branch|Status
 ---|---
-master|![master](https://github.com/harry-cpp/sdl.cs/workflows/Continuous%20Integration/badge.svg)
+develop|![develop](https://github.com/harry-cpp/sdl.cs/workflows/Build/badge.svg)
 
 ## Tutorial
 
