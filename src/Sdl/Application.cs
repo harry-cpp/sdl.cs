@@ -230,7 +230,7 @@ namespace Sdl
         /// <summary>
         /// Exits the application.
         /// </summary>
-        public void Exit()
+        public static void Exit()
         {
             Native.SDL_Quit();
         }
