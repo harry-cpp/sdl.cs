@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
+    <PackageName>sdl.cs</PackageName>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Paul Vick</Authors>
     <Company>Paul Vick</Company>
