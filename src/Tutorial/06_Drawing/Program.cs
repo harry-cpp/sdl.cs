@@ -19,8 +19,12 @@ Keyboard.KeyDown += (s, e) => viewport = e.Keycode switch
     _ => viewport
 };
 
-while (app.DispatchEvent())
+while (app.IsRunning)
 {
+    while (app.DispatchEvent() > 0)
+    {
+    }
+    
     renderer.DrawColor = Colors.White;
     renderer.Clear();
 

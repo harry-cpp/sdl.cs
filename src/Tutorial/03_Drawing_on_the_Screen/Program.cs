@@ -21,8 +21,12 @@ Keyboard.KeyDown += (s, e) =>
     }
 };
 
-while (app.DispatchEvent())
+while (app.IsRunning)
 {
+    while (app.DispatchEvent() > 0)
+    {
+    }
+
     if (stretch)
     {
         sunflowers.BlitScaled(window.Surface, null, (Point.Origin, windowSize));

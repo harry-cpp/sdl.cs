@@ -59,6 +59,11 @@ namespace SdlSharp
         }
 
         /// <summary>
+        /// Specifies if the application is running.
+        /// </summary>
+        public bool IsRunning => !_quitReceived;
+
+        /// <summary>
         /// The version of SDL_image being used.
         /// </summary>
         public static Version ImageVersion =>
@@ -220,6 +225,14 @@ namespace SdlSharp
 
             Native.SDL_Quit();
             _quitReceived = true;
+        }
+
+        /// <summary>
+        /// Exits the application.
+        /// </summary>
+        public void Exit()
+        {
+            Native.SDL_Quit();
         }
 
         /// <summary>

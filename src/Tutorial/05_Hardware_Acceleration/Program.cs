@@ -21,8 +21,12 @@ Keyboard.KeyDown += (s, e) =>
     }
 };
 
-while (app.DispatchEvent())
+while (app.IsRunning)
 {
+    while (app.DispatchEvent() > 0)
+    {
+    }
+
     renderer.DrawColor = Colors.White;
     renderer.Clear();
     renderer.Copy(sunflowers, null, (Point.Origin, stretch ? windowSize : sunflowers.Size));

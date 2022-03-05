@@ -6,6 +6,9 @@ Size windowSize = (640, 480);
 Rectangle windowRectangle = (Window.UndefinedWindowLocation, windowSize);
 using var window = Window.Create("Hello, World!", windowRectangle, WindowOptions.Shown);
 
-while (app.DispatchEvent())
+while (app.IsRunning)
 {
+    while (app.DispatchEvent() > 0)
+    {
+    }
 }
