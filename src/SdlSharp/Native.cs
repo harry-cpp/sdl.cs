@@ -998,7 +998,7 @@ namespace SdlSharp
         public static extern void SDL_FlushEvents(SDL_EventType minType, SDL_EventType maxType);
 
         [DllImport(Sdl2, CallingConvention = CallingConvention.Cdecl)]
-        public static extern bool SDL_PollEvent(out SDL_Event e);
+        public static extern int SDL_PollEvent(out SDL_Event e);
 
         [DllImport(Sdl2, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SDL_WaitEvent(out SDL_Event e);

@@ -294,18 +294,18 @@ namespace SdlSharp
         /// Dispatches one event.
         /// </summary>
         /// <param name="timeout">How long to wait for an event.</param>
-        /// <returns><c>true</c> if the quit event has been received, <c>false</c> otherwise.</returns>
-        public bool DispatchEvent(int timeout = 0)
+        /// <returns>The amount of events that are left to be processed.</returns>
+        public int DispatchEvent(int timeout = 0)
         {
             Native.SDL_Event e;
+            int ret = 0;
 
             switch (timeout)
             {
                 case 0:
-                    if (!Native.SDL_PollEvent(out e))
-                    {
-                        return !_quitReceived;
-                    }
+                    ret = Native.SDL_PollEvent(out e);
+                    if (ret == 0)
+                        return 0;
                     break;
 
                 case Timeout.Infinite:
@@ -444,7 +444,7 @@ namespace SdlSharp
                     throw new InvalidOperationException();
             }
 
-            return !_quitReceived;
+            return ret;
         }
     }
 }
