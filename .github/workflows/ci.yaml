@@ -1,25 +1,25 @@
-name: Continuous Integration
+name: Build
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: [push, pull_request]
 
 jobs:
   build:
-
-    runs-on: windows-latest
-
+    runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
-    - name: Setup .NET Core
+    - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.101
-    - name: Install dependencies
+        dotnet-version: '6.0.x'
+    - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration Release --no-restore --version 1.0.0
+    - uses: actions/upload-artifact@main
+      with:
+        name: Nuget Packages
+        path: |
+          src/Sdl/bin/Release/*.nupkg
+        if-no-files-found: error
