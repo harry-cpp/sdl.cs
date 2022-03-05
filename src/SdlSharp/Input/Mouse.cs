@@ -1,8 +1,8 @@
 ﻿using System;
 
-using SdlSharp.Graphics;
+using Sdl.Graphics;
 
-namespace SdlSharp.Input
+namespace Sdl.Input
 {
     /// <summary>
     /// Mouse related APIs.

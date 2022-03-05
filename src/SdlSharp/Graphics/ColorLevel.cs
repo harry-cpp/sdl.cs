@@ -1,4 +1,4 @@
-﻿namespace SdlSharp.Graphics
+﻿namespace Sdl.Graphics
 {
     /// <summary>
     /// Specifies the intensity level of the color.

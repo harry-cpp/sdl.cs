@@ -1,4 +1,4 @@
-﻿namespace SdlSharp.Graphics
+﻿namespace Sdl.Graphics
 {
     /// <summary>
     /// The mode for a scaling operation.

@@ -1,4 +1,4 @@
-﻿namespace SdlSharp.Graphics
+﻿namespace Sdl.Graphics
 {
     /// <summary>
     /// Named colors.

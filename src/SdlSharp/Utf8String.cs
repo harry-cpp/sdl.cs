@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace SdlSharp
+namespace Sdl
 {
     /// <summary>
     /// A UTF-8 string from native string.

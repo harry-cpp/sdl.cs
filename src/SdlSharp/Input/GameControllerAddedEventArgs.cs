@@ -1,4 +1,4 @@
-﻿namespace SdlSharp.Input
+﻿namespace Sdl.Input
 {
     /// <summary>
     /// Event arguments for a game controller device added event.

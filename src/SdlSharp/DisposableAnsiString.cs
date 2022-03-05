@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace SdlSharp
+namespace Sdl
 {
     /// <summary>
     /// An ANSI native string that must be freed.

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SdlSharp
+namespace Sdl
 {
     /// <summary>
     /// The SDL subsystems that can be initialized.

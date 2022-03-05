@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SdlSharp.Sound
+namespace Sdl.Sound
 {
     /// <summary>
     /// An audio stream that converts audio from one format to another.
@@ -13,7 +13,7 @@ namespace SdlSharp.Sound
         /// The number of bytes available in the stream.
         /// </summary>
         public int Available =>
-            SdlSharp.Native.SDL_AudioStreamAvailable(Native);
+            Sdl.Native.SDL_AudioStreamAvailable(Native);
 
         /// <summary>
         /// Creates a new audio stream.
@@ -26,7 +26,7 @@ namespace SdlSharp.Sound
         /// <param name="destinationRate">The destination audio bitrate.</param>
         /// <returns>The new audio stream.</returns>
         public static AudioStream Create(AudioFormat sourceFormat, byte sourceChannels, int sourceRate, AudioFormat destinationFormat, byte destinationChannels, int destinationRate) =>
-            PointerToInstanceNotNull(SdlSharp.Native.SDL_NewAudioStream(sourceFormat, sourceChannels, sourceRate, destinationFormat, destinationChannels, destinationRate));
+            PointerToInstanceNotNull(Sdl.Native.SDL_NewAudioStream(sourceFormat, sourceChannels, sourceRate, destinationFormat, destinationChannels, destinationRate));
 
         /// <summary>
         /// Puts data into the stream.
@@ -36,7 +36,7 @@ namespace SdlSharp.Sound
         {
             fixed (byte* dataPointer = data)
             {
-                _ = SdlSharp.Native.CheckError(SdlSharp.Native.SDL_AudioStreamPut(Native, dataPointer, data.Length));
+                _ = Sdl.Native.CheckError(Sdl.Native.SDL_AudioStreamPut(Native, dataPointer, data.Length));
             }
         }
 
@@ -49,7 +49,7 @@ namespace SdlSharp.Sound
         {
             fixed (byte* dataPointer = data)
             {
-                return SdlSharp.Native.CheckError(SdlSharp.Native.SDL_AudioStreamGet(Native, dataPointer, data.Length));
+                return Sdl.Native.CheckError(Sdl.Native.SDL_AudioStreamGet(Native, dataPointer, data.Length));
             }
         }
 
@@ -57,20 +57,20 @@ namespace SdlSharp.Sound
         /// Flushes the audio stream.
         /// </summary>
         public void Flush() =>
-            SdlSharp.Native.CheckError(SdlSharp.Native.SDL_AudioStreamFlush(Native));
+            Sdl.Native.CheckError(Sdl.Native.SDL_AudioStreamFlush(Native));
 
         /// <summary>
         /// Clears any pending data in the audio stream.
         /// </summary>
         public void Clear() =>
-            SdlSharp.Native.SDL_AudioStreamClear(Native);
+            Sdl.Native.SDL_AudioStreamClear(Native);
 
         /// <summary>
         /// Closes an audio stream.
         /// </summary>
         public override void Dispose()
         {
-            SdlSharp.Native.SDL_FreeAudioStream(Native);
+            Sdl.Native.SDL_FreeAudioStream(Native);
             base.Dispose();
         }
     }

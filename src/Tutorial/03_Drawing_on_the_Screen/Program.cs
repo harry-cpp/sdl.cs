@@ -1,6 +1,6 @@
-﻿using SdlSharp;
-using SdlSharp.Graphics;
-using SdlSharp.Input;
+﻿using Sdl;
+using Sdl.Graphics;
+using Sdl.Input;
 
 using Application app = new(Subsystems.Video);
 Size windowSize = (640, 480);

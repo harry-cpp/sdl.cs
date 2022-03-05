@@ -4,7 +4,7 @@ using System.Collections.Generic;
 // In this case, it's really the whole point, and this will not have a lot of instantiations
 #pragma warning disable CA1000 // Do not declare members on generic types
 
-namespace SdlSharp
+namespace Sdl
 {
     /// <summary>
     /// The base class of an object that represents a pointer SDL object.
@@ -50,7 +50,7 @@ namespace SdlSharp
 
             value = new TManaged
             {
-                Native = SdlSharp.Native.CheckPointer(native)
+                Native = Sdl.Native.CheckPointer(native)
             };
             s_instances[(nint)native] = new WeakReference<TManaged>(value);
             return value;

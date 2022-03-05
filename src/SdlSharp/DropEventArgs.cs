@@ -1,6 +1,6 @@
-﻿using SdlSharp.Graphics;
+﻿using Sdl.Graphics;
 
-namespace SdlSharp
+namespace Sdl
 {
     /// <summary>
     /// Event arguments for a drop event.

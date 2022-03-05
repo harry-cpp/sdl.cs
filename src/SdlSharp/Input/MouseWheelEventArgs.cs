@@ -1,6 +1,6 @@
-﻿using SdlSharp.Graphics;
+﻿using Sdl.Graphics;
 
-namespace SdlSharp.Input
+namespace Sdl.Input
 {
     /// <summary>
     /// Event arguments for mouse wheel motion.

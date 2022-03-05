@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace SdlSharp.Sound
+namespace Sdl.Sound
 {
     /// <summary>
     /// A callback when music is finished playing.

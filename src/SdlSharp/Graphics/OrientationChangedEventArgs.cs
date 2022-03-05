@@ -1,4 +1,4 @@
-﻿namespace SdlSharp.Graphics
+﻿namespace Sdl.Graphics
 {
     /// <summary>
     /// Event aguments when a display's orientation changes.

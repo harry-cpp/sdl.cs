@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-using SdlSharp.Touch;
+using Sdl.Touch;
 
-namespace SdlSharp
+namespace Sdl
 {
     /// <summary>
     /// A class that represents a haptic effect.
@@ -20,48 +20,48 @@ namespace SdlSharp
         /// The current haptic effects.
         /// </summary>
         public static IReadOnlyCollection<HapticInfo> Haptics => s_hapticInfos ??= new ItemCollection<HapticInfo>(
-            index => SdlSharp.Native.CheckNotNull(HapticInfo.IndexToInstance(index)),
-            SdlSharp.Native.SDL_NumHaptics);
+            index => Sdl.Native.CheckNotNull(HapticInfo.IndexToInstance(index)),
+            Sdl.Native.SDL_NumHaptics);
 
         /// <summary>
         /// Information about this effect.
         /// </summary>
         public HapticInfo Info =>
-            HapticInfo.IndexToInstance(SdlSharp.Native.SDL_HapticIndex(Native));
+            HapticInfo.IndexToInstance(Sdl.Native.SDL_HapticIndex(Native));
 
         /// <summary>
         /// The number of effects that can be stored.
         /// </summary>
         public int MaxEffects =>
-            SdlSharp.Native.SDL_HapticNumEffects(Native);
+            Sdl.Native.SDL_HapticNumEffects(Native);
 
         /// <summary>
         /// The effects currently playing.
         /// </summary>
         public int EffectsPlaying =>
-            SdlSharp.Native.SDL_HapticNumEffectsPlaying(Native);
+            Sdl.Native.SDL_HapticNumEffectsPlaying(Native);
 
         /// <summary>
         /// The capabilities of the haptic device.
         /// </summary>
         public HapticCapabilities Capabilities =>
-            (HapticCapabilities)SdlSharp.Native.SDL_HapticQuery(Native) & HapticCapabilities.All;
+            (HapticCapabilities)Sdl.Native.SDL_HapticQuery(Native) & HapticCapabilities.All;
 
         /// <summary>
         /// The number of axes.
         /// </summary>
         public int AxisCount =>
-            SdlSharp.Native.SDL_HapticNumAxes(Native);
+            Sdl.Native.SDL_HapticNumAxes(Native);
 
         /// <summary>
         /// Whether rumble is supported.
         /// </summary>
-        public bool RumbleSupported => SdlSharp.Native.CheckErrorBool(SdlSharp.Native.SDL_HapticRumbleSupported(Native));
+        public bool RumbleSupported => Sdl.Native.CheckErrorBool(Sdl.Native.SDL_HapticRumbleSupported(Native));
 
         /// <inheritdoc/>
         public override void Dispose()
         {
-            SdlSharp.Native.SDL_HapticClose(Native);
+            Sdl.Native.SDL_HapticClose(Native);
             base.Dispose();
         }
 
@@ -73,7 +73,7 @@ namespace SdlSharp
         public bool EffectSupported(HapticEffect effect)
         {
             var nativeEffect = effect.ToNative();
-            return SdlSharp.Native.SDL_HapticEffectSupported(Native, in nativeEffect);
+            return Sdl.Native.SDL_HapticEffectSupported(Native, in nativeEffect);
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace SdlSharp
         public HapticEffectInstance NewEffect(HapticEffect effect)
         {
             var nativeEffect = effect.ToNative();
-            return HapticEffectInstance.IndexToInstance(Native, SdlSharp.Native.CheckError(SdlSharp.Native.SDL_HapticNewEffect(Native, in nativeEffect)));
+            return HapticEffectInstance.IndexToInstance(Native, Sdl.Native.CheckError(Sdl.Native.SDL_HapticNewEffect(Native, in nativeEffect)));
         }
 
         /// <summary>
@@ -92,38 +92,38 @@ namespace SdlSharp
         /// </summary>
         /// <param name="gain">The gain amount.</param>
         public void SetGain(int gain) =>
-            SdlSharp.Native.CheckError(SdlSharp.Native.SDL_HapticSetGain(Native, gain));
+            Sdl.Native.CheckError(Sdl.Native.SDL_HapticSetGain(Native, gain));
 
         /// <summary>
         /// Sets the global autocenter of the device.
         /// </summary>
         /// <param name="autocenter">The autocenter value.</param>
         public void SetAutocenter(int autocenter) =>
-            SdlSharp.Native.CheckError(SdlSharp.Native.SDL_HapticSetAutocenter(Native, autocenter));
+            Sdl.Native.CheckError(Sdl.Native.SDL_HapticSetAutocenter(Native, autocenter));
 
         /// <summary>
         /// Pauses the effect.
         /// </summary>
         public void Pause() =>
-            SdlSharp.Native.CheckError(SdlSharp.Native.SDL_HapticPause(Native));
+            Sdl.Native.CheckError(Sdl.Native.SDL_HapticPause(Native));
 
         /// <summary>
         /// Unpauses the effect.
         /// </summary>
         public void Unpause() =>
-            SdlSharp.Native.CheckError(SdlSharp.Native.SDL_HapticUnpause(Native));
+            Sdl.Native.CheckError(Sdl.Native.SDL_HapticUnpause(Native));
 
         /// <summary>
         /// Stops all effect instances.
         /// </summary>
         public void StopAll() =>
-            SdlSharp.Native.CheckError(SdlSharp.Native.SDL_HapticStopAll(Native));
+            Sdl.Native.CheckError(Sdl.Native.SDL_HapticStopAll(Native));
 
         /// <summary>
         /// Initializes rumble support.
         /// </summary>
         public void RumbleInit() =>
-            SdlSharp.Native.CheckError(SdlSharp.Native.SDL_HapticRumbleInit(Native));
+            Sdl.Native.CheckError(Sdl.Native.SDL_HapticRumbleInit(Native));
 
         /// <summary>
         /// Plays a rumble effect.
@@ -131,12 +131,12 @@ namespace SdlSharp
         /// <param name="strength">The strength of the effect.</param>
         /// <param name="length">The length of the effect.</param>
         public void RumblePlay(float strength, uint length) =>
-            SdlSharp.Native.CheckError(SdlSharp.Native.SDL_HapticRumblePlay(Native, strength, length));
+            Sdl.Native.CheckError(Sdl.Native.SDL_HapticRumblePlay(Native, strength, length));
 
         /// <summary>
         /// Stops the rumble effect.
         /// </summary>
         public void RumbleStop() =>
-            SdlSharp.Native.CheckError(SdlSharp.Native.SDL_HapticRumbleStop(Native));
+            Sdl.Native.CheckError(Sdl.Native.SDL_HapticRumbleStop(Native));
     }
 }

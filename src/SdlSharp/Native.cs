@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-using SdlSharp.Graphics;
-using SdlSharp.Input;
-using SdlSharp.Sound;
-using SdlSharp.Touch;
+using Sdl.Graphics;
+using Sdl.Input;
+using Sdl.Sound;
+using Sdl.Touch;
 
 // We are intentionally exposing the P/Invoke calls so people can do low-level calls if needed
 #pragma warning disable CA1401 // P/Invokes should not be visible
@@ -25,7 +25,7 @@ using SdlSharp.Touch;
 #pragma warning disable IDE0051 // Private member ... is unused
 #pragma warning disable IDE0052 // Private member ... can be removed as the value assigned to it is never read
 
-namespace SdlSharp
+namespace Sdl
 {
     /// <summary>
     /// Interop methods to call native SDL APIs.

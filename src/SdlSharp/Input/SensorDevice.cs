@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SdlSharp.Input
+namespace Sdl.Input
 {
     /// <summary>
     /// A sensor device.

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SdlSharp.Graphics
+namespace Sdl.Graphics
 {
     /// <summary>
     /// A pixel color in a particular pixel format.

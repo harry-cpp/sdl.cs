@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SdlSharp.Graphics
+namespace Sdl.Graphics
 {
     /// <summary>
     /// A shaping for a window.

@@ -1,4 +1,4 @@
-﻿namespace SdlSharp
+﻿namespace Sdl
 {
     /// <summary>
     /// The state of device power.

@@ -1,4 +1,4 @@
-﻿namespace SdlSharp
+﻿namespace Sdl
 {
     /// <summary>
     /// Event arguments for a drop event where a value was dropped.

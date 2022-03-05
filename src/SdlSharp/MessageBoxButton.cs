@@ -1,4 +1,4 @@
-﻿namespace SdlSharp
+﻿namespace Sdl
 {
     /// <summary>
     /// A button in a message box.

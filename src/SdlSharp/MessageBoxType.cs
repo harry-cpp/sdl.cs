@@ -1,4 +1,4 @@
-﻿namespace SdlSharp
+﻿namespace Sdl
 {
     /// <summary>
     /// Flags for a message box.

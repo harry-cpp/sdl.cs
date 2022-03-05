@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SdlSharp.Sound
+namespace Sdl.Sound
 {
     /// <summary>
     /// A format for audio data.

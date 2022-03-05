@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace SdlSharp.Graphics
+namespace Sdl.Graphics
 {
     /// <summary>
     /// Event arguments for a system window message event.

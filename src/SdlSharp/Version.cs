@@ -1,4 +1,4 @@
-﻿namespace SdlSharp
+﻿namespace Sdl
 {
     /// <summary>
     /// A version number for a component.

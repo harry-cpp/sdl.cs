@@ -1,4 +1,4 @@
-﻿namespace SdlSharp.Touch
+﻿namespace Sdl.Touch
 {
     /// <summary>
     /// An instance of a haptic effect.
@@ -9,7 +9,7 @@
         /// Whether the effect instance is currently running.
         /// </summary>
         public bool EffectRunning =>
-            SdlSharp.Native.CheckErrorBool(SdlSharp.Native.SDL_HapticGetEffectStatus(Native, Index));
+            Sdl.Native.CheckErrorBool(Sdl.Native.SDL_HapticGetEffectStatus(Native, Index));
 
         /// <summary>
         /// Updates the effect instance.
@@ -18,7 +18,7 @@
         public void UpdateEffect(HapticEffect effect)
         {
             var nativeEffect = effect.ToNative();
-            _ = SdlSharp.Native.CheckError(SdlSharp.Native.SDL_HapticUpdateEffect(Native, Index, in nativeEffect));
+            _ = Sdl.Native.CheckError(Sdl.Native.SDL_HapticUpdateEffect(Native, Index, in nativeEffect));
         }
 
         /// <summary>
@@ -26,18 +26,18 @@
         /// </summary>
         /// <param name="iterations">The number of times to run the effect.</param>
         public void RunEffect(uint iterations) =>
-            SdlSharp.Native.CheckError(SdlSharp.Native.SDL_HapticRunEffect(Native, Index, iterations));
+            Sdl.Native.CheckError(Sdl.Native.SDL_HapticRunEffect(Native, Index, iterations));
 
         /// <summary>
         /// Stops the effect.
         /// </summary>
         public void StopEffect() =>
-            SdlSharp.Native.CheckError(SdlSharp.Native.SDL_HapticStopEffect(Native, Index));
+            Sdl.Native.CheckError(Sdl.Native.SDL_HapticStopEffect(Native, Index));
 
         /// <inheritdoc/>
         public override void Dispose()
         {
-            SdlSharp.Native.SDL_HapticDestroyEffect(Native, Index);
+            Sdl.Native.SDL_HapticDestroyEffect(Native, Index);
             base.Dispose();
         }
     }

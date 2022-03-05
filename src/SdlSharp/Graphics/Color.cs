@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace SdlSharp.Graphics
+namespace Sdl.Graphics
 {
     /// <summary>
     /// A color.

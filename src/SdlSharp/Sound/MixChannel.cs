@@ -1,4 +1,4 @@
-﻿namespace SdlSharp.Sound
+﻿namespace Sdl.Sound
 {
     /// <summary>
     /// A mixer channels.

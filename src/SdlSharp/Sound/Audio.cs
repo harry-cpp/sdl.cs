@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SdlSharp.Sound
+namespace Sdl.Sound
 {
     /// <summary>
     /// Audio processing routines.

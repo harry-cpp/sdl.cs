@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace SdlSharp
+namespace Sdl
 {
     internal sealed class ItemCollection<T> : IReadOnlyList<T>
     {

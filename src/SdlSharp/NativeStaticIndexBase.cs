@@ -4,7 +4,7 @@ using System.Collections.Generic;
 // In this case, it's really the whole point, and this will not have a lot of instantiations
 #pragma warning disable CA1000 // Do not declare members on generic types
 
-namespace SdlSharp
+namespace Sdl
 {
     /// <summary>
     /// The base of an object that represents an indexed SDL object.

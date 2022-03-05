@@ -1,4 +1,4 @@
-﻿namespace SdlSharp.Touch
+﻿namespace Sdl.Touch
 {
     /// <summary>
     /// A direction indication for a haptic effect.

@@ -1,4 +1,4 @@
-﻿namespace SdlSharp.Touch
+﻿namespace Sdl.Touch
 {
     /// <summary>
     /// A custom haptic effect.

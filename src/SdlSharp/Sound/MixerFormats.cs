@@ -1,4 +1,4 @@
-﻿namespace SdlSharp.Sound
+﻿namespace Sdl.Sound
 {
     /// <summary>
     /// The formats supported by the mixer.

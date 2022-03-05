@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SdlSharp.Touch
+namespace Sdl.Touch
 {
     /// <summary>
     /// A periodic haptic effect.

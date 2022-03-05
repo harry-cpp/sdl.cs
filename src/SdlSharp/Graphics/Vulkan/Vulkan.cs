@@ -2,7 +2,7 @@ using System;
 
 using Vulkan;
 
-namespace SdlSharp.Graphics.Vulkan
+namespace Sdl.Graphics.Vulkan
 {
     /// <summary>
     /// SDL Vulkan related methods.
@@ -15,10 +15,10 @@ namespace SdlSharp.Graphics.Vulkan
         /// <param name="window">Window from which to use the surface.</param>
         /// <param name="instance">Vulkan instance to be used for the surface creation.</param>
         /// <returns></returns>
-        /// <exception cref="SdlSharp.SdlException">If the surface has failed to be created.</exception>
+        /// <exception cref="Sdl.SdlException">If the surface has failed to be created.</exception>
         public static unsafe SurfaceKhr CreateVulkanSurface(this Window window, Instance instance)
         {
-            var windowCreated = SdlSharp.Native.SDL_Vulkan_CreateSurface(window.Native, ((IMarshalling)instance).Handle, out UInt64 surface);
+            var windowCreated = Sdl.Native.SDL_Vulkan_CreateSurface(window.Native, ((IMarshalling)instance).Handle, out UInt64 surface);
 
             if (!windowCreated)
                 throw new SdlException();
@@ -35,14 +35,14 @@ namespace SdlSharp.Graphics.Vulkan
         /// </summary>
         /// <param name="window">A window for which the required Vulkan instance extensions should be retrieved (will be deprecated in a future release).</param>
         /// <returns>List of required Vulkan extensions.</returns>
-        /// <exception cref="SdlSharp.SdlException">If the SDL_Vulkan_GetInstanceExtensions has failed to acquire a list of required extensions.</exception>
+        /// <exception cref="Sdl.SdlException">If the SDL_Vulkan_GetInstanceExtensions has failed to acquire a list of required extensions.</exception>
         public static unsafe string[] GetVulkanInstanceExtensions(this Window window)
         {
-            if (!SdlSharp.Native.SDL_Vulkan_GetInstanceExtensions(window.Native, out uint pCount, IntPtr.Zero))
+            if (!Sdl.Native.SDL_Vulkan_GetInstanceExtensions(window.Native, out uint pCount, IntPtr.Zero))
                 throw new SdlException();
 
             var rawExtensions = new IntPtr[pCount];
-            if (!SdlSharp.Native.SDL_Vulkan_GetInstanceExtensions(window.Native, out pCount, rawExtensions))
+            if (!Sdl.Native.SDL_Vulkan_GetInstanceExtensions(window.Native, out pCount, rawExtensions))
                 throw new SdlException();
 
             var extensions = new string[pCount];

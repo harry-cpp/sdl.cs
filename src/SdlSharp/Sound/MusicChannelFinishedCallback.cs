@@ -1,4 +1,4 @@
-﻿namespace SdlSharp.Sound
+﻿namespace Sdl.Sound
 {
     /// <summary>
     /// A delegate that is called when a channel finishes.

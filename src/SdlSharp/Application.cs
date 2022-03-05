@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Threading;
 
-using SdlSharp.Graphics;
-using SdlSharp.Input;
-using SdlSharp.Sound;
-using SdlSharp.Touch;
+using Sdl.Graphics;
+using Sdl.Input;
+using Sdl.Sound;
+using Sdl.Touch;
 
-namespace SdlSharp
+namespace Sdl
 {
     /// <summary>
     /// A class representing the SDL application.

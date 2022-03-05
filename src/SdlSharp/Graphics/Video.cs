@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SdlSharp.Graphics
+namespace Sdl.Graphics
 {
     /// <summary>
     /// The video subsystem.

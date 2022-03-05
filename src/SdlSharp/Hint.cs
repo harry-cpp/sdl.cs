@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SdlSharp
+namespace Sdl
 {
     /// <summary>
     /// A hint is a setting that can change SDL behavior.

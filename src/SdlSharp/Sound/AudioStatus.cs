@@ -1,4 +1,4 @@
-﻿namespace SdlSharp.Sound
+﻿namespace Sdl.Sound
 {
     /// <summary>
     /// The status of an audio device.

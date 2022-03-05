@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace SdlSharp
+namespace Sdl
 {
     /// <summary>
     /// A callback when a hint is changed.

@@ -1,4 +1,4 @@
-﻿namespace SdlSharp.Input
+﻿namespace Sdl.Input
 {
     /// <summary>
     /// Extensions for keyboard values.

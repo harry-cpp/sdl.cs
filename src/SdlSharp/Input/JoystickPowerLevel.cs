@@ -1,4 +1,4 @@
-﻿namespace SdlSharp.Input
+﻿namespace Sdl.Input
 {
     /// <summary>
     /// The power level of a joystick.

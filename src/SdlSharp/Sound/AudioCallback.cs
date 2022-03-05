@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SdlSharp.Sound
+namespace Sdl.Sound
 {
     /// <summary>
     /// The callback for an audio device.

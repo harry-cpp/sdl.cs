@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace SdlSharp.Graphics
+namespace Sdl.Graphics
 {
     /// <summary>
     /// Information about a renderer.

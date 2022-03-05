@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace SdlSharp
+namespace Sdl
 {
     /// <summary>
     /// A rectangle.

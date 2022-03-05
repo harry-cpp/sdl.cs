@@ -1,7 +1,7 @@
 ﻿using System;
 
-using SdlSharp;
-using SdlSharp.Graphics;
+using Sdl;
+using Sdl.Graphics;
 
 using Application app = new(Subsystems.Video, ImageFormats.Png);
 Size windowSize = (640, 480);

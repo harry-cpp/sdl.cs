@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SdlSharp.Input
+namespace Sdl.Input
 {
     /// <summary>
     /// Information about a specific joystick

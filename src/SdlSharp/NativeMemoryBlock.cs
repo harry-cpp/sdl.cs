@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SdlSharp
+namespace Sdl
 {
     /// <summary>
     /// A block of memory allocated by SDL.

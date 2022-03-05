@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace SdlSharp
+namespace Sdl
 {
     /// <summary>
     /// A callback for log messages.

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SdlSharp.Input
+namespace Sdl.Input
 {
     /// <summary>
     /// Modifiers to keys on the keyboard.
