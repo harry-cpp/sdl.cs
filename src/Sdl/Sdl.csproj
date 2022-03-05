@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>CA2101</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup>
