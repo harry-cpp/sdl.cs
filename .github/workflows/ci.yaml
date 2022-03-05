@@ -16,7 +16,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --configuration Release --no-restore --version 1.0.0
+      run: dotnet build --configuration Release --no-restore --property:Version=1.0.0
     - uses: actions/upload-artifact@main
       with:
         name: Nuget Packages
